@@ -286,6 +286,10 @@
         }
       }
 
+      //if(event.target.nodeName != 'TD' && !(Handsontable.Dom.hasClass(event.target, 'current') && Handsontable.Dom.hasClass(event.target, 'wtBorder'))){
+      //	return;
+      //}
+
       this.show(event.pageY, event.pageX);
 
       $(document).on('mousedown.htContextMenu', Handsontable.helper.proxy(ContextMenu.prototype.close, this));
