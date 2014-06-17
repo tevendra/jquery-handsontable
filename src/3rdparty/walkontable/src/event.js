@@ -15,15 +15,16 @@ function WalkontableEvent(instance) {
       that.instance.getSetting('onCellCornerMouseDown', event, event.target);
     }
     else if (cell.TD){
-      if(cell.TD.nodeName == 'TD' || cell.TD.nodeName == 'TH'){
+//      if(cell.TD.nodeName == 'TD' || cell.TD.nodeName == 'TH'){
         if (that.instance.hasSetting('onCellMouseDown')) {
           that.instance.getSetting('onCellMouseDown', event, cell.coords, cell.TD, that.instance);
         }
-      }
+//      }
     }
 
     if (event.button !== 2) { //if not right mouse button
-      if (cell.TD && cell.TD.nodeName === 'TD') {
+//      if (cell.TD && cell.TD.nodeName === 'TD') {
+      if (cell.TD) {
         dblClickOrigin[0] = cell.TD;
         clearTimeout(dblClickTimeout[0]);
         dblClickTimeout[0] = setTimeout(function () {
@@ -69,7 +70,8 @@ function WalkontableEvent(instance) {
         if (that.wtDom.hasClass(event.target, 'corner')) {
           that.instance.getSetting('onCellCornerDblClick', event, cell.coords, cell.TD, that.instance);
         }
-        else if (cell.TD) {
+//        else if (cell.TD) {
+        else {
           that.instance.getSetting('onCellDblClick', event, cell.coords, cell.TD, that.instance);
         }
 
