@@ -5,7 +5,7 @@
  * This tiny library transforms JavaScript arrays to strings that are pasteable by LibreOffice, OpenOffice,
  * Google Docs and Microsoft Excel.
  *
- * Copyright 2012, Marcin Warpechowski
+ * Copyright 2014, Marcin Warpechowski
  * Licensed under the MIT license.
  * http://github.com/warpech/sheetclip/
  */

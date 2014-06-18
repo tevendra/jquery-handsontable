@@ -4,7 +4,7 @@
  * This code is not intended to be maximally efficient nor safe. It is for demonstrational purposes only.
  * Changes and more examples in different languages are welcome.
  *
- * Copyright 2012, Marcin Warpechowski
+ * Copyright 2014, Marcin Warpechowski
  * Licensed under the MIT license.
  * http://warpech.github.com/jquery-handsontable/
  */
