@@ -401,7 +401,7 @@
       Handsontable.Dom.fastInnerHTML(wrapper, value);
     }
 
-    if (itemIsDisabled(item, contextMenu.instance)){
+    if (itemIsDisabled(item)){
       Handsontable.Dom.addClass(TD, 'htDisabled');
 
       $(wrapper).on('mouseenter', function () {
@@ -421,7 +421,7 @@
       return new RegExp(ContextMenu.SEPARATOR, 'i').test(item.name);
     }
 
-    function itemIsDisabled(item, instance){
+    function itemIsDisabled(item){
       return item.disabled === true || (typeof item.disabled == 'function' && item.disabled.call(contextMenu.instance) === true);
     }
   };
@@ -653,11 +653,10 @@
   };
 
   ContextMenu.utils.normalizeSelection = function(selRange){
-    var selection = {
+   return {
       start: selRange.getTopLeftCorner(),
       end: selRange.getBottomRightCorner()
     };
-    return selection;
   };
 
   ContextMenu.utils.isSeparator = function (cell) {
